@@ -52,7 +52,3 @@ body:
     attributes:
       label: 補足・備考
       description: 注意点・関連資料・懸念点などがあれば記入してください
-      placeholder: |
-        - "関連仕様書: /docs/VI9990401仕様.md"
-        - "デザイン: Figma #123"
-        - 既存画面との兼ね合いに注意

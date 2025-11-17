@@ -6,7 +6,7 @@ body:
   - type: input
     id: screen_id
     attributes:
-      label: 画面ID / 画面コード
+      label: APIID / APIコード
       description: "例: LOGIN001など"
       placeholder: C0001
     validations:
@@ -15,9 +15,9 @@ body:
   - type: input
     id: screen_name
     attributes:
-      label: 画面名
-      description: "画面の名称を記入してください（例: ログイン画面）"
-      placeholder: ログイン画面
+      label: API名
+      description: "APIの名称を記入してください（例: ログインAPI）"
+      placeholder: ログインAPI
     validations:
       required: true
 
@@ -25,9 +25,9 @@ body:
     id: overview
     attributes:
       label: 概要
-      description: 画面の機能や目的を簡潔に説明してください
+      description: APIの機能や目的を簡潔に説明してください
       placeholder: |
-        メールグループの追加・編集・削除を行う画面。
+        メールグループの追加・編集・削除を行うAPI。
         得意先に紐づくメールアドレスも管理する。
     validations:
       required: true
@@ -37,7 +37,3 @@ body:
     attributes:
       label: 補足・備考
       description: 注意点・関連資料・懸念点などがあれば記入してください
-      placeholder: |
-        - "関連仕様書: /docs/VI9990401仕様.md"
-        - "デザイン: Figma #123"
-        - 既存画面との兼ね合いに注意
