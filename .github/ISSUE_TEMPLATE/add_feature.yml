@@ -1,0 +1,31 @@
+name: "🖥️ 画面"
+description: "新規画面に関するIssueを作成します"
+title: "[画面] "
+labels: ["Feature"]
+body:
+  - type: input
+    id: screen_name
+    attributes:
+      label: 画面名
+    validations:
+      required: true
+
+  - type: textarea
+    id: purpose
+    attributes:
+      label: 目的 / 背景
+    validations:
+      required: true
+
+  - type: textarea
+    id: specification
+    attributes:
+      label: 画面仕様
+      description: 詳細仕様を記載してください
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: 備考

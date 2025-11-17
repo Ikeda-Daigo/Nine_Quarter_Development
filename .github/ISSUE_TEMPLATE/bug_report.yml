@@ -1,0 +1,32 @@
+name: "🐛 バグ報告"
+description: "バグの報告用テンプレート"
+title: "[バグ] "
+labels: ["Bug"]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: バグ概要
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 再現手順
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 本来の期待動作
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: 実際の動作
+    validations:
+      required: true

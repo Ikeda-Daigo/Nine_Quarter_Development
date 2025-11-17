@@ -1,0 +1,25 @@
+name: "🔌 API"
+description: "新規APIに関するIssueを作成します"
+title: "[API] "
+labels: ["Api"]
+body:
+  - type: input
+    id: api_name
+    attributes:
+      label: API名
+    validations:
+      required: true
+
+  - type: textarea
+    id: purpose
+    attributes:
+      label: 目的 / 背景
+    validations:
+      required: true
+
+  - type: textarea
+    id: specification
+    attributes:
+      label: API仕様
+    validations:
+      required: true
