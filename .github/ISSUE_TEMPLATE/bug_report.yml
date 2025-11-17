@@ -1,32 +1,41 @@
-name: "🐛 バグ報告"
-description: "バグの報告用テンプレート"
-title: "[バグ] "
-labels: ["Bug"]
+name: 🐛 バグ報告フォーム
+description: 単体試験まで完了した画面に対する不具合フォーム
+title: "[バグ] <画面ID>: <バグ概要>"
+labels: ["bug", "要調査"]
 body:
-  - type: textarea
-    id: summary
+  - type: input
+    id: screen_id
     attributes:
-      label: バグ概要
+      label: 対象画面ID
+      placeholder: C0001
     validations:
       required: true
-
-  - type: textarea
-    id: steps
+  - type: input
+    id: screen_name
     attributes:
-      label: 再現手順
+      label: 対象画面名
+      placeholder: ログイン画面
+  - type: textarea
+    id: detail
+    attributes:
+      label: バグ詳細
+      description: 起きている事象、期待動作を明記してください。
+      placeholder: |
+        【現象】正常なユーザーID、PASSを入力してもログイン不可
+        【期待動作】正常にログインが完了し、ログイン後の画面にリダイレクトされること
+        【再現手順】・・・
+  - type: dropdown
+    id: triage
+    attributes:
+      label: 緊急度
+      options:
+        - 低
+        - 中
+        - 高
     validations:
       required: true
-
   - type: textarea
-    id: expected
+    id: screenshot
     attributes:
-      label: 本来の期待動作
-    validations:
-      required: true
-
-  - type: textarea
-    id: actual
-    attributes:
-      label: 実際の動作
-    validations:
-      required: true
+      label: スクリーンショット/エラーログ
+      description: バグ発見時の状況が分かるようにスクリーンショットもしくはエラーログを添付してください

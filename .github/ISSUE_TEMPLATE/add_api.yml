@@ -1,25 +1,43 @@
-name: "🔌 API"
-description: "新規APIに関するIssueを作成します"
-title: "[API] "
+name: 📄 API追加フォーム
+description: API追加用Issueフォーム
+title: "[機能追加] <API名>"
 labels: ["Api"]
 body:
   - type: input
-    id: api_name
+    id: screen_id
     attributes:
-      label: API名
+      label: 画面ID / 画面コード
+      description: "例: LOGIN001など"
+      placeholder: C0001
+    validations:
+      required: true
+
+  - type: input
+    id: screen_name
+    attributes:
+      label: 画面名
+      description: "画面の名称を記入してください（例: ログイン画面）"
+      placeholder: ログイン画面
     validations:
       required: true
 
   - type: textarea
-    id: purpose
+    id: overview
     attributes:
-      label: 目的 / 背景
+      label: 概要
+      description: 画面の機能や目的を簡潔に説明してください
+      placeholder: |
+        メールグループの追加・編集・削除を行う画面。
+        得意先に紐づくメールアドレスも管理する。
     validations:
       required: true
 
   - type: textarea
-    id: specification
+    id: notes
     attributes:
-      label: API仕様
-    validations:
-      required: true
+      label: 補足・備考
+      description: 注意点・関連資料・懸念点などがあれば記入してください
+      placeholder: |
+        - "関連仕様書: /docs/VI9990401仕様.md"
+        - "デザイン: Figma #123"
+        - 既存画面との兼ね合いに注意

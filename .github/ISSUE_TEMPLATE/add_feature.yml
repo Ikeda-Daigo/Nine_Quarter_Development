@@ -1,31 +1,58 @@
-name: "🖥️ 画面"
-description: "新規画面に関するIssueを作成します"
-title: "[画面] "
+name: 📄 機能追加フォーム
+description: 画面・機能追加用Issueフォーム
+title: "[機能追加] <画面名>"
 labels: ["Feature"]
 body:
+  - type: input
+    id: screen_id
+    attributes:
+      label: 画面ID / 画面コード
+      description: "例: LOGIN001など"
+      placeholder: C0001
+    validations:
+      required: true
+
   - type: input
     id: screen_name
     attributes:
       label: 画面名
+      description: "画面の名称を記入してください（例: ログイン画面）"
+      placeholder: ログイン画面
     validations:
       required: true
 
   - type: textarea
-    id: purpose
+    id: overview
     attributes:
-      label: 目的 / 背景
+      label: 概要
+      description: 画面の機能や目的を簡潔に説明してください
+      placeholder: |
+        メールグループの追加・編集・削除を行う画面。
+        得意先に紐づくメールアドレスも管理する。
     validations:
       required: true
 
-  - type: textarea
-    id: specification
+  - type: checkboxes
+    id: tasks
     attributes:
-      label: 画面仕様
-      description: 詳細仕様を記載してください
-    validations:
-      required: true
+      label: 必要な対応
+      description: この画面で実装すべき項目を選択してください
+      options:
+        - label: UIレイアウトの作成
+        - label: 入力項目の実装
+        - label: バリデーション処理の実装
+        - label: API連携
+        - label: 一覧表示・更新処理の実装
+        - label: モーダル・ダイアログ対応
+        - label: 単体テスト
+        - label: その他（コメント欄で詳細を記入）
 
   - type: textarea
     id: notes
     attributes:
-      label: 備考
+      label: 補足・備考
+      description: 注意点・関連資料・懸念点などがあれば記入してください
+      placeholder: |
+        - "関連仕様書: /docs/VI9990401仕様.md"
+        - "デザイン: Figma #123"
+        - 既存画面との兼ね合いに注意
